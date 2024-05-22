@@ -1,14 +1,24 @@
-{"users":[
+{
+  "users": [
     {
-        "id":1,
-        "username":"ks",
-        "email":"ks@gmail.com"
+      "id": "1",
+      "username": "ks",
+      "email": "ks@gmail.com"
     },
     {
-        "id":2,
-        "username":"ks2",
-        "email":"ks2@gmail.com"
+      "id": "2",
+      "username": "ks2",
+      "email": "ks2@gmail.com"
+    },
+    {
+      "id": "69e9",
+      "username": "sophia",
+      "email": "sophia@gmail.com"
+    },
+    {
+      "id": "cf3f",
+      "username": "ks3",
+      "email": "ks3@gmail.com"
     }
-
-]
+  ]
 }

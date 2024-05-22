@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:9000/users")
+      .get("http://localhost:8000/users")
       .then((response) => setUsers(response.data))
       .catch((error) => {
         console.error("There was an error fetching the users' data", error);
@@ -16,6 +17,9 @@ export default function Home() {
   return (
     <div className="container mt-3">
       <h2>Users List</h2>
+      <Link className="btn btn-primary" to="/create">
+        Create +
+      </Link>
       <table className="table">
         <thead>
           <tr>

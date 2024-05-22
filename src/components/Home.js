@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="container mt-3">
       <h2>Users List</h2>
-      <Link className="btn btn-primary" to="/create">
+      <Link className="btn btn-success m-3" to="/create">
         Create +
       </Link>
       <table className="table">
@@ -36,7 +36,9 @@ export default function Home() {
               <td>{user.username}</td>
               <td>{user.email}</td>
               <td>
-                <button>Update</button>
+                <Link className="btn btn-primary" to={`/update/${user.id}`}>
+                  Update
+                </Link>
                 <button>Delete</button>
               </td>
             </tr>

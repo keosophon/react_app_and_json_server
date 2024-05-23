@@ -50,11 +50,14 @@ export default function Home() {
                   Update
                 </Link>
                 <button
-                  className="btn btn-danger ml-3wqre"
+                  className="btn btn-danger ms-2"
                   onClick={(e) => handleDelete(user.id)}
                 >
                   Delete
                 </button>
+                <Link className="btn btn-info ms-2" to={`/read/${user.id}`}>
+                  Read
+                </Link>
               </td>
             </tr>
           ))}

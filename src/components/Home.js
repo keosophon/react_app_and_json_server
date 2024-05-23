@@ -14,6 +14,16 @@ export default function Home() {
       });
   }, []);
 
+  const handleDelete = (id) => {
+    const confirm = window.confirm("Do you want to delete: " + id);
+    if (confirm) {
+      axios.delete("http://localhost:8000/users/" + id).then((result) => {
+        alert("Successfully deleted: " + id);
+        window.location.reload();
+      });
+    }
+  };
+
   return (
     <div className="container mt-3">
       <h2>Users List</h2>
@@ -39,7 +49,12 @@ export default function Home() {
                 <Link className="btn btn-primary" to={`/update/${user.id}`}>
                   Update
                 </Link>
-                <button>Delete</button>
+                <button
+                  className="btn btn-danger ml-3wqre"
+                  onClick={(e) => handleDelete(user.id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
